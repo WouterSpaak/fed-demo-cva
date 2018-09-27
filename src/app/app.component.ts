@@ -12,6 +12,7 @@ export class AppComponent {
   get frontenders(): string {
     return this.form.get('frontenders').value;
   }
+
   constructor(private readonly formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
       frontenders: null

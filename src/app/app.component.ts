@@ -18,4 +18,8 @@ export class AppComponent {
       frontenders: null
     });
   }
+
+  logAllTheThings() {
+    console.log(this.form.value);
+  }
 }

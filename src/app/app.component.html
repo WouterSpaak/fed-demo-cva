@@ -1,0 +1,16 @@
+<main>
+  <h1>
+    <code>ControlValueAccessor</code> Demo
+  </h1>
+  <hr>
+  <div class="wrapper"
+       [formGroup]="form">
+    <label>Vul hier de frontenders in, gescheiden door een komma.
+      <input type="text"
+             formControlName="frontenders"
+             placeholder="CB Frontenders">
+    </label>
+  </div>
+
+  <p>{{ frontenders }}</p>
+</main>

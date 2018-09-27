@@ -1,0 +1,23 @@
+code {
+  font-family: 'consolas';
+}
+
+main {
+  display: block;
+  max-width: 50%;
+  margin: 32px auto;
+}
+
+hr {
+  border: 1px dashed #2b496c;
+}
+
+input {
+  display: block;
+  width: calc(100% - 32px);
+  padding: 16px;
+  margin-top: 16px;
+  border: 1px solid #668bb4;
+  border-radius: 6px;
+  background-color: #c3d1e0;
+}

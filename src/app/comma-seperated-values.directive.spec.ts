@@ -36,6 +36,28 @@ describe('CommaSeperatedValuesDirective', () => {
       expect(component.control.value).toEqual(['Foo', 'Bar', 'Baz', 'Bae']);
     });
   });
+
+  describe('other lifecycle hooks', () => {
+    it('should not set the control to touched initially', () => {
+      expect(component.control.pristine).toBe(true);
+    });
+
+    it('should set the control to touched on blur', () => {
+      getInput(fixture).triggerEventHandler('blur', null);
+      fixture.detectChanges();
+      expect(component.control.touched).toBe(true);
+    });
+
+    it('should correctly set disabled state', () => {
+      component.control.disable();
+      fixture.detectChanges();
+      expect(getInput(fixture).nativeElement.disabled).toBe(true);
+
+      component.control.enable();
+      fixture.detectChanges();
+      expect(getInput(fixture).nativeElement.disabled).toBe(false);
+    });
+  });
 });
 
 @Component({

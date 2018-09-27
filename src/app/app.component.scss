@@ -21,3 +21,19 @@ input {
   border-radius: 6px;
   background-color: #deebf8;
 }
+
+ul {
+  padding: 6px;
+  border: 1px solid #2b496c;
+
+  li {
+    font-size: 1.2em;
+    display: block;
+    padding: 6px;
+    border-bottom: 1px dotted #668bb4;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}

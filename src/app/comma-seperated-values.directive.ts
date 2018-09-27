@@ -41,6 +41,6 @@ export class CommaSeperatedValuesDirective implements ControlValueAccessor {
   }
 
   setDisabledState?(isDisabled: boolean): void {
-    throw new Error('Method not implemented.');
+    this.renderer.setProperty(this.elementRef.nativeElement, 'disabled', isDisabled);
   }
 }

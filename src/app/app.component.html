@@ -7,12 +7,17 @@
        [formGroup]="form">
     <label>Vul hier de frontenders in, gescheiden door een komma.
       <input type="text"
+             appCommaSeperatedValues
              formControlName="frontenders"
              placeholder="Frontenders">
     </label>
   </div>
 
-  <p>{{ frontenders }}</p>
+  <!-- <p>{{ frontenders }}</p> -->
+
+  <ul>
+    <li *ngFor="let frontender of frontenders">{{ frontender }}</li>
+  </ul>
 
   <button (click)="logAllTheThings()">Log it!</button>
 </main>

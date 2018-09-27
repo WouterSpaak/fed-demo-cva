@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,16 +7,12 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  readonly form: FormGroup;
+  readonly form = new FormGroup({
+    frontenders: new FormControl([])
+  });
 
-  get frontenders(): string {
+  get frontenders(): string[] {
     return this.form.get('frontenders').value;
-  }
-
-  constructor(private readonly formBuilder: FormBuilder) {
-    this.form = this.formBuilder.group({
-      frontenders: null
-    });
   }
 
   logAllTheThings() {

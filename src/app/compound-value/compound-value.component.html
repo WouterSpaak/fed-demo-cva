@@ -1,0 +1,14 @@
+<div class="compound-value-wrapper"
+     [formGroup]="form">
+  <input type="text"
+         (blur)="setTouched()"
+         formControlName="name">
+  <input type="checkbox"
+         (blur)="setTouched()"
+         formControlName="toggle">
+  <input type="range"
+         (blur)="setTouched()"
+         min="0"
+         max="200"
+         formControlName="range">
+</div>

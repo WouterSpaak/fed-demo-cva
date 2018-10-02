@@ -11,8 +11,9 @@
              formControlName="frontenders"
              placeholder="Frontenders">
     </label>
+    <app-compound-value formControlName="foo"
+                        (validationErrorChange)="logErrors($event)"></app-compound-value>
   </div>
-
   <!-- <p>{{ frontenders }}</p> -->
 
   <ul>
